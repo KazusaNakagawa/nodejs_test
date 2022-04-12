@@ -3,7 +3,8 @@
 
 const axios = require("axios")
 const url = 'http://0.0.0.0:8000'
-const AUTH_TOKEN = null
+// TODO: write in solid colors. Authentication beaere token.
+const AUTH_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzdHJpbmciLCJleHAiOjE2NDk3NzQ3MDl9.FpUsHIraoc3q5AUqnE-bR2knTz0k22ZoGL067-b7yVQ'
 
 
 async function getUsers() {
@@ -57,9 +58,6 @@ async function postApi(endpoint, username, password) {
 
 async function getApi(endpoint, username, password) {
 
-  // TODO: write in solid colors. Authentication beaere token.
-  const AUTH_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzdHJpbmciLCJleHAiOjE2NDk3MTkzMjl9.bseyHdgea7U0Dv_m8kJdjSEXCh1YFA32xBsOOgVbWnk'
-
   await axios({
     method: 'get',
     url: `${url}/${endpoint}`,
@@ -85,5 +83,5 @@ async function getApi(endpoint, username, password) {
 
 // ----- call -----
 // getUsers()
-getApi('users/me/', 'string', 'string')
-// postApi('token', 'string', 'string')
+// getApi('users/me/', 'string', 'string')
+postApi('token', 'string', 'string')
