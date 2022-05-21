@@ -11,7 +11,7 @@ const AUTH_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzdHJpbmciLCJ
 async function getUsers() {
   await axios({
     method: 'get',
-    url: `${url}/users`,
+    url: `${url}/users/`,
   })
   .then(function (res) {
     console.log({ data: res.data })
